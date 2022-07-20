@@ -52,6 +52,7 @@ int[,] resultMatrix = new int[matrix2.GetLength(0), matrix1.GetLength(1)];
     return resultMatrix;
 }
 
+
 System.Console.WriteLine("------result------");
 int[,] resmatr = new int[2,2];
 resmatr = MultiplicMatrix(matrix1,matrix2);
