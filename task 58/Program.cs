@@ -33,18 +33,23 @@ PrintMatrix(matrix2);
 int[,] MultiplicMatrix(int[,] matrix1, int[,] matrix2)
 {
 int[,] resultMatrix = new int[matrix2.GetLength(0), matrix1.GetLength(1)];
-    int k = 0;
     int n = 0;
-    for (int i = 0; i < matrix1.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix1.GetLength(1); j++)
-            {
-                resultMatrix[k, n] += matrix1[i, j] * matrix2[j, i];
-            }
-            n++;          
-        }
-        k++;
-     return resultMatrix;
+    int o = 0; 
+                        for (i=0; i<matrix1.GetLength(0))
+                        {
+                            for (k=0; k<matrix2.GetLength(1))
+                                {
+                                for (m=0; m<matrix2.GetLength(0); m++)
+                                    {
+                                    resultMatrix[n,o] += matrix1[i,m] * matrix2[m,k]; //resultMatrix[i,k] и удалить 46-50стр
+                                    }
+                                o++;
+                                if (o == 3) {o = 0;}
+                                }
+                            n++;
+                            if (n == 3) {n = 0;}
+                        }   
+    return resultMatrix;
 }
 
 System.Console.WriteLine("------result------");
