@@ -1,6 +1,7 @@
 ﻿
-int[,,] GetRndMatrix(int dimension, int rows, int columns, int min, int max)
+int[,,] GetMatrix(int dimension, int rows, int columns, int min, int max)
 {
+    int num = 10;
     int[,,] matrix = new int[dimension, rows, columns];
     for (int k = 0; k < matrix.GetLength(2); k++)
     {
@@ -8,7 +9,7 @@ int[,,] GetRndMatrix(int dimension, int rows, int columns, int min, int max)
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                matrix[k, i, j] = new Random().Next(min, max);
+                matrix[k, i, j] = num++;
             }
         }
     }
@@ -31,4 +32,4 @@ void PrintMatrix(int[,,] matrix)
     }
 }
 
-PrintMatrix(GetRndMatrix(3,3,3,0,10));
+PrintMatrix(GetMatrix(3,3,3,10,100));
