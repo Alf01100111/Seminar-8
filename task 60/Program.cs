@@ -1,7 +1,6 @@
 ﻿
-int[,,] GetMatrix(int dimension, int rows, int columns, int min, int max)
-{
-    int num = 10;
+int[,,] GetMatrix(int dimension, int rows, int columns, int num)
+{    
     int[,,] matrix = new int[dimension, rows, columns];
     for (int k = 0; k < matrix.GetLength(2); k++)
     {
@@ -32,4 +31,4 @@ void PrintMatrix(int[,,] matrix)
     }
 }
 
-PrintMatrix(GetMatrix(3,3,3,10,100));
+PrintMatrix(GetMatrix(3,3,3,10));
